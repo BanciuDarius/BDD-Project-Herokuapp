@@ -1,5 +1,5 @@
 Feature: Test login functionality
-
+    @smoke
     Scenario: Test login successfully
       Given open the login page
       When the user type username "tomsmith"
@@ -8,7 +8,7 @@ Feature: Test login functionality
       Then the welcome message appears on page
       And the user is on the secure page
       And "You logged into a secure area!" success message is displayed
-
+  @test
   Scenario Outline: check error message with wrong credentials
       Given open the login page
       When the user type username "<username>"
